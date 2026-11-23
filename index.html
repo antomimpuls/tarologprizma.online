@@ -21,7 +21,7 @@ const SITE_SETTINGS = {
   'redirectDelaySeconds': 15,
   'siteUrl': 'https://tarologprizma.online/',
   'whatsappMessage': 'Здравствуйте, хочу обратиться к вам за помощью.',
-  'telegramEnabled': 1,
+  'telegramEnabled': true,
   'telegramNickname': 'Eleonora003',
   'yandexMetrikaId': '113216785',
   'psychicImageURL': 'https://tarologprizma.online/photo-216423ca86ad421da77c1df874b80272.jpg',
@@ -29,18 +29,18 @@ const SITE_SETTINGS = {
   'responseTime': '5 минут',
   'metrikaMessengerVisible': false,
   'maxEnabled': false,
-  'maxUrl': ''
+  'maxUrl': ""
 };
 const PSYCHIC_NAME=SITE_SETTINGS.psychicName||'Элеонора';
 const PHONE_DIGITS=(SITE_SETTINGS.phoneNumber||'').replace(/\D/g,'');
 const WHATSAPP_MESSAGE=PSYCHIC_NAME ? `Здравствуйте, ${PSYCHIC_NAME}! Хочу обратиться к вам за помощью.` : 'Здравствуйте, хочу обратиться к вам за помощью.';
 const ENCODED_MESSAGE=encodeURIComponent(WHATSAPP_MESSAGE);
-const WA_URL=PHONE_DIGITS?`https://wa.me/${PHONE_DIGITS}?text=${ENCODED_MESSAGE}`:'';
-const FALLBACK_WA_URL=PHONE_DIGITS?`https://wa.me/${PHONE_DIGITS}`:'https://wa.me/79085498163';
+const WA_URL="https://wa.me/79175880592?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
+const FALLBACK_WA_URL="https://wa.me/79175880592?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 const TARGET_WA_URL=WA_URL||FALLBACK_WA_URL;
 const TELEGRAM_ENABLED=Number(SITE_SETTINGS.telegramEnabled||0)===1;
 const TELEGRAM_NICKNAME=(SITE_SETTINGS.telegramNickname||'').replace(/^@+/,'');
-const TELEGRAM_URL=TELEGRAM_ENABLED&&TELEGRAM_NICKNAME?`https://t.me/${TELEGRAM_NICKNAME}?text=${ENCODED_MESSAGE}`:'';
+const TELEGRAM_URL="https://t.me/Eleonora003?text=%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%2C%20%D0%AD%D0%BB%D0%B5%D0%BE%D0%BD%D0%BE%D1%80%D0%B0%21%20%D0%A5%D0%BE%D1%87%D1%83%20%D0%BE%D0%B1%D1%80%D0%B0%D1%82%D0%B8%D1%82%D1%8C%D1%81%D1%8F%20%D0%BA%20%D0%B2%D0%B0%D0%BC%20%D0%B7%D0%B0%20%D0%BF%D0%BE%D0%BC%D0%BE%D1%89%D1%8C%D1%8E.";
 
 const SITE_STATS_TRACKER_CONFIG = {
     projectUrl: "https://stats.72-56-243-254.sslip.io",
@@ -806,11 +806,12 @@ body{
 .studio-photo-backdrop{position:absolute;inset:7px;border-radius:50%;overflow:hidden;z-index:1;background:center/cover no-repeat url("https://tarologprizma.online/photo-216423ca86ad421da77c1df874b80272.jpg");filter:blur(8px);opacity:.85;pointer-events:none}
 .hero-img #psychicImage{box-sizing:border-box!important;object-fit:contain!important;object-position:center!important;padding:12%!important;background:transparent!important}
 </style>
+<!-- CONVERSIA_CONTACT_CONTRACT_V1 a66f3e4d6a253a4c902cc37d1a2130252b120022d7e66dfa066add311cd28766 -->
 </head>
 <body>
 <div class="sticky-messengers" id="stickyMessengers">
-<a class="btn btn-wa" data-wa="true" data-msg-url="https://wa.me/79085498163" rel="noopener" target="_blank">Написать в WhatsApp</a>
-<a class="btn btn-tg" data-telegram="true" data-msg-url="https://t.me/anna_more_magic" rel="noopener" target="_blank">Написать в Telegram</a>
+<a class="btn btn-wa" data-wa="true" data-msg-url="https://wa.me/79175880592" rel="noopener" target="_blank">Написать в WhatsApp</a>
+<a class="btn btn-tg" data-telegram="true" data-msg-url="https://t.me/Eleonora003" rel="noopener" target="_blank">Написать в Telegram</a>
 </div>
 <section class="hero">
 <div class="container">
@@ -936,7 +937,7 @@ body{
 <p>Телефон: </p>
 <p>Email: </p>
 </div><p style="font-size:0.9rem;color:#9cb7d1;font-style:italic;margin-bottom:30px">Дата последнего обновления: 4 февраля 2026 года</p><h2>1. Основные принципы</h2><p>В документе указано, какие сведения обрабатывает сайт, в каком объёме и как обеспечивается их безопасность.</p><p>Пользование сайтом и отправка обращения означают ваше согласие с условиями обработки персональных данных.</p><h2>2. Какие сведения могут быть запрошены</h2><p>Мы запрашиваем лишь сведения, которые нужны для связи с вами, разбора запроса и сопровождения консультации.</p><ul><li>Сведения для связи: имя, номер телефона, email и мессенджер</li><li>Материалы запроса: добровольно переданные тексты, фотографии, голосовые сообщения и другие сведения</li><li>Техническая информация: cookie, IP-адрес, вид устройства и настройки браузера</li></ul><h2>3. Цели использования данных</h2><p>Эти сведения нужны, чтобы поддерживать связь с клиентом, оказывать услуги, вести обязательную отчётность и улучшать сервис.</p><ul><li>Подготовка консультации и сопровождение вашего запроса</li><li>Учёт поступивших обращений, расчётов и подготовка обязательной отчётности</li><li>Изучение обезличенной статистики для улучшения работы сайта</li></ul><h2>4. Раскрытие и передача сведений</h2><p>Без вашего согласия персональные данные не передаются третьим лицам, за исключением прямо предусмотренных законом случаев.</p><p>Когда закон требует раскрыть сведения, передаётся только минимально необходимый объём информации.</p><h2>5. Способы защиты информации</h2><p>Для защиты используются организационные и технические меры: разделение прав доступа, контроль хранения и регулярная проверка процессов.</p><p>Работать с данными могут лишь специалисты, которым они необходимы для выполнения своих задач.</p><h2>6. Использование cookie и сервисов аналитики</h2><p>С помощью cookie и инструментов аналитики сайт оценивает стабильность работы, посещаемость и удобство интерфейса.</p><p>Настройки браузера позволяют ограничить cookie; при этом некоторые функции могут работать не в полном объёме.</p><h2>7. Ваши права как пользователя</h2><p>Вы вправе обратиться с запросом об уточнении, обновлении, ограничении обработки либо удалении персональных данных.</p><p>Чтобы воспользоваться своими правами, отправьте запрос на указанный email или в мессенджер, приложив сведения для идентификации обращения.</p><h2>8. Связь по вопросам персональных данных</h2><div class="company-info">
-<p>Телефон: <a href="tel:+7 (908) 549-81-63" style="color:#38bdf8;text-decoration:none">+7 (908) 549-81-63</a></p>
+<p>Телефон: <a href="tel:+79175880592" style="color:#38bdf8;text-decoration:none">+7 (917) 588-05-92</a></p>
 <p>Email: <a href="mailto:info@tarologprizma.online" style="color:#38bdf8;text-decoration:none">info@tarologprizma.online</a></p>
 <p>Сайт: <a href="https://tarologprizma.online/" style="color:#38bdf8;text-decoration:none" target="_blank">https://tarologprizma.online</a></p>
 </div><p style="text-align:center;margin-top:40px">Продолжение пользования сайтом означает согласие с текущей редакцией политики.</p></div>
